@@ -1,10 +1,13 @@
 {
   "name": "math-game",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@rematch/core": "^1.1.0",
     "classnames": "^2.2.6",
+    "cordova-android": "^8.0.0",
+    "cordova-browser": "^6.0.0",
     "eslint-config-airbnb": "^17.1.0",
     "immutability-helper": "^3.0.0",
     "nes.css": "^2.1.1",
@@ -19,6 +22,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "move": "rm -rf www/* && mv build/* www || move build/* www",
+    "deploy": "npm run build && npm run move && cordova run android",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -35,6 +40,18 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cordova-plugin-whitelist": "^1.3.3"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "browser",
+      "android"
     ]
   }
 }
