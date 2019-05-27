@@ -1,30 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
-import Problem from '../Problem';
+import ProblemPanel from '../ProblemPanel';
 
 const Container = styled.div`padding: 1em;`;
+const TitleContainer = styled.div`padding: 2em;`;
 const Title = styled.h1`text-align: center;`;
 const ContentContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
 const Content = styled.div`
-  width: 900px;
-  margin-top: 6em;
+  width: 100%;
+  margin-top: 3.5em;
 `;
+const Label = styled.p`text-align: center;`;
 
 const App = () => (
   <Container>
-    <div>
+    <TitleContainer>
       <Title>Math Game</Title>
-    </div>
+    </TitleContainer>
     <ContentContainer>
       <Content>
-        <p>Resolve the operation:</p>
-        <div className="nes-container with-title">
-          <div className="title">Resolved: 0</div>
-          <Problem />
-        </div>
+        <Label>Resolve the operation</Label>
+        <ProblemPanel />
       </Content>
     </ContentContainer>
   </Container>

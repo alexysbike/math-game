@@ -1,7 +1,8 @@
 module.exports = {
   'extends': 'airbnb',
   'rules': {
-    'no-underscore-dangle': 'off'
+    'no-underscore-dangle': 'off',
+    'no-nested-ternary': 'off'
   },
   'globals': {
     'window': true,
