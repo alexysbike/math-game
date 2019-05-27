@@ -4,6 +4,7 @@ import { useMappedState, useDispatch } from 'redux-react-hook';
 import Problem from './components/Problem';
 import ProblemOptions from './components/ProblemOptions';
 import useProblemData from './useProblemData';
+import { useTranslation } from '../../services/translation';
 
 const icons = [
   'nes-bcrikko',
@@ -27,6 +28,8 @@ const IconContainer = styled.div`
 `;
 
 const ProblemPanel = () => {
+  // Translation
+  const { t } = useTranslation();
   // State
   const [left, right, result, options, generate] = useProblemData(1, 9, 3);
   const [response, setResponse] = useState(null);
@@ -44,13 +47,13 @@ const ProblemPanel = () => {
       setTimeout(() => {
         setResponse(null);
         generate();
-      }, 1000);
+      }, 1300);
     }
-  }, [result, generate]);
+  }, [result, generate, dispatch.problems, resolved]);
   return (
     <>
       <Container className="nes-container with-title">
-        <div className="title">{`Resolved: ${resolved}`}</div>
+        <div className="title">{`${t('Resolved')}: ${resolved}`}</div>
         <Problem left={left} right={right} result={result} response={response} />
       </Container>
       <ProblemOptions

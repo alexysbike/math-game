@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 const ProblemContainer = styled.div`
   display: flex;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
   margin-top: 1em;
   
   div {

@@ -6,6 +6,9 @@ import 'nes.css/css/nes.min.css';
 import App from './components/App';
 import models from './modules';
 import * as serviceWorker from './serviceWorker';
+import TranslationService from './services/translation/service';
+
+TranslationService.initialize();
 
 const store = init({ models });
 

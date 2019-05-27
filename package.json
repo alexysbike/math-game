@@ -10,6 +10,7 @@
     "cordova-browser": "^6.0.0",
     "eslint-config-airbnb": "^17.1.0",
     "immutability-helper": "^3.0.0",
+    "moment": "^2.24.0",
     "nes.css": "^2.1.1",
     "prop-types": "^15.7.2",
     "ramda": "^0.26.1",

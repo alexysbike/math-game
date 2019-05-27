@@ -28,7 +28,7 @@ const useProblemData = (min, max, nOptions) => {
     const unshuffle = [left + right, ...getOptions(nOptions - 1, left + right)];
     const options = shuffleArray(unshuffle);
     return [left, right, left + right, options, generate];
-  }, [counter]);
+  }, [counter, max, min, nOptions]);
 };
 
 export default useProblemData;
